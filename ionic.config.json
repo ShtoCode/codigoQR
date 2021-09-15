@@ -1,0 +1,7 @@
+{
+  "name": "codigoQR",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
