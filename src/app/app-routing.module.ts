@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'annimations',
     loadChildren: () => import('./pages/annimations/annimations.module').then( m => m.AnnimationsPageModule)
   },
+  {
+    path: 'ani2',
+    loadChildren: () => import('./pages/ani2/ani2.module').then( m => m.Ani2PageModule)
+  },
 ];
 
 @NgModule({
