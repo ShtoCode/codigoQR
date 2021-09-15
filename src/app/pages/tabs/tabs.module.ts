@@ -8,12 +8,30 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 
+import { Routes, RouterModule } from '@angular/router';
+
+
+const routes: Routes=[{
+  path: '',
+  component: TabsPage,
+  children: [
+    { path: 'home',
+      loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
+    },
+    { path: 'codigo-qr',
+      loadChildren: () => import('../codigo-qr/codigo-qr.module').then( m => m.CodigoQRPageModule) 
+    },
+    { path: 'annimations',
+      loadChildren: () => import('../annimations/annimations.module').then( m => m.AnnimationsPageModule) }
+  ]
+}]
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [TabsPage]
 })
