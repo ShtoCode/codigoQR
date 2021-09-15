@@ -1,0 +1,11 @@
+Creacion de Codigo QR
+---------------------
+ionic cordova plugin add phonegap-plugin-barcodescanner
+npm install @ionic-native/barcode-scanner
+
+ionic cordova plugin add cordova-base64-to-gallery
+npm install @ionic-native/base64-to-gallery
+
+
+npm install ngx-qrcode2
+npm install --save @ionic-native/core
